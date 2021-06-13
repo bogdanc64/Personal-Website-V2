@@ -19,6 +19,7 @@
     --input-color: ;
     --body-color: #EFF1F3;
     --header-color: #262626;
+    --darkmode_button:#f5f6f7;
 
     /*========== Font and typography ==========*/
     --body-font: "Poppins", sans-serif;
@@ -124,8 +125,6 @@ img{
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 
-
-
 .section_title{
   font-size:var(--h1-font-size);
 }
@@ -171,6 +170,8 @@ nav{
 }
 
 nav .nav_items{
+  font-size:var(--normal-font-size);
+  font-weight:var(--font-light);
   display: none;
 }
 
@@ -179,6 +180,17 @@ nav .nav_link{
   color:var(--header-color);
 }
 
+.darkmode--activated .nav_logo {
+  color: var(--body-color);
+}
+
+.darkmode--activated #nav-toggle {
+  color: var(--body-color);
+}
+
+.darkmode--activated .nav_link{
+  color: var(--body-color);
+}
 /* show menu */
 
 .nav_toggle{
