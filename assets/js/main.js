@@ -63,6 +63,44 @@ const options = {
 const darkmode = new Darkmode(options);
 darkmode.showWidget();
 
+/*==================== TERMINAL ====================*/
+
+var customCommands = {
+  help: { // keep it equal to name till I change it
+    name: 'help', // keep it equal to the key till I change it
+    type: 'builtin', // OPTIONAL default to 'usr' if not passed
+    man: "List of available commands.\nType man <command> to have further info.",
+    fn: function() {
+                return "Commands available: " + Object.keys(customCommands).join(", ") + '.\n Type "man <command>" to have further info.'
+    },
+  },
+
+  cv: { // keep it equal to name till I change it
+    name: 'cv', // keep it equal to the key till I change it
+    type: 'builtin', // OPTIONAL default to 'usr' if not passed
+    man: 'My CV', // Manual Entry for the command OPTIONAL
+    fn: function cv(ARGV) {
+      // Here is where the action goes, do what you want and return a value
+      // (more on context and arguments below)
+
+      return `Will be available in future.`
+    },
+  },
+  joke: { // keep it equal to name till I change it
+    name: 'test', // keep it equal to the key till I change it
+    type: 'builtin', // OPTIONAL default to 'usr' if not passed
+    man: 'A little joke. I know, it is very bad. :)', // Manual Entry for the command OPTIONAL
+    fn: function cv(ARGV) {
+      // Here is where the action goes, do what you want and return a value
+      // (more on context and arguments below)
+
+      return `John had 2 horses. One was named John and one was at mall.`
+    },
+  },
+  // ...more commands
+}
+var shell = new TermlyPrompt('#terminal', { commands: customCommands })
+
 /*==================== ACCORDION SKILLS ====================*/
 
 
