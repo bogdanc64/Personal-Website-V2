@@ -1,40 +1,43 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
 
-        <!--==================== UNICONS ====================-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--==================== UNICONS ====================-->
 
 
-        <!--==================== SWIPER CSS ====================-->
-        <link rel="stylesheet" href="">
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="">
 
-        <!--==================== CSS ====================-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css">
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-        <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
-        <link rel="stylesheet" href="assets/css/main.css">
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 
-        <title>Bogdan Maftei</title>
-    </head>
-    <body id="body">
+    <title>Bogdan Maftei</title>
+</head>
+
+<body id="body">
+    <div class="container">
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
-          <a href="#" class="nav_logo">Bogdan C.</a>
-          <nav class="nav">
-            <div class="nav_menu" id="nav-menu">
-                <div class="nav_items" id="nav-items">
-                  <a href="#home" class="nav_link" id="nav-link">home.()</a>
-                  <a href="#aboutme" class="nav_link" id="nav-link">about_me.()</a>
-                  <a href="#skills" class="nav_link" id="nav-link">skills.()</a>
-                  <a href="#portfolio" class="nav_link" id="nav-link">portfolio.()</a>
-                  <a href="#contact" class="nav_link" id="nav-link">contact.()</a>
+            <a href="#" class="nav_logo">Bogdan C.</a>
+            <nav class="nav">
+                <div class="nav_menu" id="nav-menu">
+                    <div class="nav_items" id="nav-items">
+                        <a href="#home" class="nav_link" id="nav-link">home.()</a>
+                        <a href="#aboutme" class="nav_link" id="nav-link">about_me.()</a>
+                        <a href="#portfolio" class="nav_link" id="nav-link">portfolio.()</a>
+                        <a href="#contact" class="nav_link" id="nav-link">contact.()</a>
+                    </div>
+
                 </div>
-                <i class="uit uit-angle-double-left" id="nav-toggle"></i>
-            </div>
-          </nav>
+            </nav>
         </header>
 
         <!--==================== MAIN ====================-->
@@ -43,35 +46,58 @@
             <!--==================== HOME ====================-->
             <section class="home section" id="home">
                 <div id="particles-js" class="particles_js"></div>
-                <div class="wrapper">
-                  <section id="terminal__bar">
-                    <div id="bar__buttons">
-                      <button class="bar__button" id="bar__button--exit">&#10005;</button>
-                      <button class="bar__button">&#9472;</button>
-                      <button class="bar__button">&#9723;</button>
-                    </div>
-                    <p id="bar__user">Terminal</p>
-                  </section>
-                  <div id="terminal" class="darkmode-ignore"></div>
+                <h1 class="welcome">Welcome! :)</h1>
+                <div class="wrapper terminal">
+                    <section id="terminal__bar">
+                        <div id="bar__buttons">
+                            <button class="bar__button" id="bar__button--exit">&#10005;</button>
+                            <button class="bar__button">&#9472;</button>
+                            <button class="bar__button">&#9723;</button>
+                        </div>
+                        <p id="bar__user">Terminal</p>
+                    </section>
+                    <div id="terminal" class="darkmode-ignore"></div>
                 </div>
             </section>
 
             <!--==================== ABOUT ====================-->
             <section class="about section" id="aboutme">
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <div class="row aboutme_presentation">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="image_div">
+                            <span class="bg_img">
+                              <img src="assets/img/portrait_300.jpg" class="my_photo" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="my_presentation">
+                            <h3 class="my_job">Junior Developer</h3>
+                            <h1 class="my_name">Maftei Bogdan-Cosmin</h1>
+                            <p class="my_description">I am a Junior Software Developer and I love making customers satisfied and pleased with my work. Always I bring a touch of originality to every project I do and I love to communicate while carrying out the project, precisely
+                                to satisfy the needs and desires of each client. <br><br> So, why are you still waiting? Let's get in touch and start our collaboration as soon as possible! :)</p>
+                            <a href="assets/pdf/Resume.pdf" class="cv_button" download>Resume</a>
+                        </div>
 
-            </section>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row justify-content-center swiper_row">
+                    <div class="swiper-container mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide card">HTML</div>
+                            <div class="swiper-slide card">CSS</div>
+                            <div class="swiper-slide card">JS</div>
+                            <div class="swiper-slide card">Python</div>
+                            <div class="swiper-slide card">Java</div>
 
-            <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
-
-
-            </section>
-
-            <!--==================== SERVICES ====================-->
-            <section class="services section" id="services">
-
-
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
             </section>
 
             <!--==================== PORTFOLIO ====================-->
@@ -92,26 +118,29 @@
 
 
         </footer>
+    </div>
 
-        <!--==================== SCROLL TOP ====================-->
+    <!--==================== JQUERY ====================-->
 
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-        <!--==================== SWIPER JS ====================-->
-        <script src=""></script>
+    <!--==================== SWIPER JS ====================-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-        <!--==================== Terminal JS ====================-->
-        <script src="assets/js/termly-prompt.min.js"></script>
+    <!--==================== Terminal JS ====================-->
+    <script src="assets/js/termly-prompt.min.js"></script>
 
-        <!--==================== KURSOR JS ====================-->
-        <script src="https://cdn.jsdelivr.net/npm/kursor"></script>
+    <!--==================== KURSOR JS ====================-->
+    <script src="https://cdn.jsdelivr.net/npm/kursor"></script>
 
-        <!--==================== Particles JS ====================-->
-        <script src="assets/js/particles.min.js"></script>
+    <!--==================== Particles JS ====================-->
+    <script src="assets/js/particles.min.js"></script>
 
-        <!--==================== DarkMode JS ====================-->
-        <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <!--==================== DarkMode JS ====================-->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script> -->
 
-        <!--==================== MAIN JS ====================-->
-        <script src="assets/js/main.js"></script>
-    </body>
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>
