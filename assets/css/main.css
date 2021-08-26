@@ -159,8 +159,7 @@
     }
     
     .row {
-        margin-left: 0;
-        margin-right: 0;
+        margin: auto;
     }
     
     .grid {
@@ -184,7 +183,8 @@
         width: 100vw;
         max-width: 100%;
         max-height: 100%;
-        height: 100vh;
+        min-height: 100vh;
+        height: auto;
         box-shadow: 0 8px 6px -11px #000;
     }
     
@@ -237,7 +237,6 @@
     
     #particles-js canvas {
         display: block;
-        vertical-align: bottom;
         -webkit-transform: scale(1);
         -ms-transform: scale(1);
         transform: scale(1);
@@ -260,8 +259,9 @@
     }
     
     .welcome {
-        position: relative;
+        position: absolute;
         top: 25%;
+        width: 100%;
         text-align: center;
         font-weight: 300;
     }
@@ -376,10 +376,59 @@
         outline: none;
     }
     /*==================== BUTTONS ====================*/
+    
+    .cv_button,
+    .skills_button,
+    .connect_button {
+        position: relative;
+        display: inline-block;
+        margin-left: 10px;
+        color: var(--title-color);
+        font-size: var(--smaller-font-size);
+        font-weight: var(--font-semi-bold);
+        border-radius: 36px;
+        background-color: linear-gradient(145deg, #242424, #1f1f1f);
+        box-shadow: 7px 7px 13px #1a1a1a, -7px -7px 13px #2a2a2a;
+    }
+    
+    .cv_button {
+        padding: 10px 30px;
+    }
+    
+    .skills_button {
+        padding: 10px 41px;
+        margin-left: 20px;
+    }
+    
+    .connect_button {
+        padding: 12px 18px;
+        margin: 25px;
+        font-size: var(--h2-font-size);
+        font-weight: var(--font-semi-bold);
+    }
+    
+    .cv_button:hover,
+    .skills_button:hover,
+    .connect_button:hover {
+        color: var(--text-color);
+        border-radius: 36px;
+        background: #222222;
+        transition: .35s linear .35s;
+        box-shadow: inset 7px 7px 13px #1a1a1a, inset -7px -7px 13px #2a2a2a;
+    }
+    
+    .connect_buttons {
+        padding-top: 75px;
+    }
+    
+    .cv_button {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
     /*==================== ABOUT ====================*/
     
     .aboutme_presentation {
-        padding-top: 100px;
+        padding-top: 150px;
     }
     
     .image_div {
@@ -423,41 +472,61 @@
         font-weight: var(--font-light);
     }
     
-    .cv_button {
-        position: relative;
-        display: inline-block;
-        margin-left: 10px;
-        padding: 10px 30px;
-        color: var(--title-color);
-        font-size: var(--smaller-font-size);
-        border-radius: 36px;
-        background-color: linear-gradient(145deg, #242424, #1f1f1f);
-        box-shadow: 7px 7px 13px #1a1a1a, -7px -7px 13px #2a2a2a;
-    }
-    
-    .cv_button:hover {
-        color: var(--text-color);
-        border-radius: 36px;
-        background: #222222;
-        transition: .35s linear .35s;
-        box-shadow: inset 7px 7px 13px #1a1a1a, inset -7px -7px 13px #2a2a2a;
-    }
-    
-    .cv_button:hover span {
-        display: inline-block;
-        transform: scale(0.98);
-    }
-    
     .swiper-container {
         padding-top: 100px;
         width: 60%;
     }
     
+    .lets_connect {
+        padding-top: 150px;
+    }
+    
+    .lets_connect h2 {
+        width: 100%;
+        position: absolute;
+        text-align: center;
+    }
+    /*==================== PORTFOLIO ==================== */
+    /*TODO:*/
+    
+    .portfolio-menu {
+        padding-top: 50px;
+        width: 100%;
+    }
+    
+    .portfolio-menu ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .portfolio-menu ul li {
+        font-size: var(--smaller-font-size);
+        color: #444;
+        padding: 20px;
+        cursor: pointer;
+    }
+    
+    .portfolio-menu ul li:hover {
+        color: var(--text-color);
+        transition: color ease-in-out .25s;
+    }
+    
+    .portfolio-menu ul li.active {
+        color: var(--text-color);
+    }
+    
+    .item {
+        padding: 0 !important;
+    }
+    
     .card {
-        width: 250px;
-        height: 200px;
+        height: 300px;
+        width: 380px;
         background: #333;
         border: 2px solid #444;
+        margin-bottom: 40px;
         filter: drop-shadow(8px 12px 10px rgb(0 0 0 / 0.4));
         /* Center slide text vertically */
         display: -webkit-box;
@@ -473,39 +542,84 @@
         -webkit-align-items: center;
         align-items: center;
     }
-    /*==================== SKILLS ====================*/
-    
-    .skills {
-        background-color: blue;
-    }
-    /*==================== SERVICES ====================*/
-    
-    .services {
-        background-color: green;
-    }
-    /* Active Modal */
-    /*==================== PORTFOLIO ====================*/
-    
-    .portfolio {
-        background-color: yellow;
-    }
-    /*==================== PROJECT IN MIND ====================*/
-    /*==================== TESTIMONIAL ====================*/
     /*==================== CONTACT ME ====================*/
+    /*TODO:*/
     
-    .contact {
-        background-color: brown;
+    .form {
+        text-align: center;
+    }
+    
+    .form input,
+    .form textarea {
+        display: block;
+        background: var(--body-color);
+        border: 2px solid #555;
+        border-radius: 5px;
+        padding: 7px;
+        margin: 10px 0;
+        width: 300px;
+        color: var(--text-color);
+        background: #222222;
+    }
+    
+    .form .col-md-5,
+    .form .col-md-6 {
+        padding: 0;
     }
     /*==================== FOOTER ====================*/
+    /*TODO:*/
+    
+    footer {
+        display: flex;
+        align-items: center;
+        margin-top: -4.5rem;
+        width: 100%;
+        height: 4.5rem;
+        border-radius: 0px;
+        background: #222222;
+        box-shadow: inset 14px 14px 36px #1d1d1d, inset -14px -14px 36px #272727;
+    }
+    
+    .copyright_text {
+        color: #777;
+        margin-left: auto;
+        order: 3;
+        padding-right: 45px;
+        font-size: var(--smaller-font-size);
+        float: right;
+    }
+    
+    .middle_text {
+        color: #777;
+        margin-left: auto;
+        order: 2;
+    }
+    
+    .footer_links {
+        padding-left: 45px;
+    }
+    
+    .footer_link {
+        padding-right: 10px;
+        font-size: var(--h3-font-size);
+        color: #777;
+    }
+    
+    .footer_link:hover {
+        color: var(--text-color);
+        transition: color ease-in-out .25s;
+    }
     /*========== SCROLL UP ==========*/
     /* Show scroll */
-    /*========== SCROLL BAR ==========*/
     /*==================== MEDIA QUERIES ====================*/
     /* For small devices */
     
     @media (max-width: 575.98px) {
         .header {
             position: absolute;
+        }
+        .welcome {
+            top: 50%;
         }
         .terminal {
             display: none;

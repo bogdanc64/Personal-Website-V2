@@ -4,37 +4,6 @@ particlesJS.load('particles-js', 'assets/js/particlesjs-config.json', function()
     console.log('callback - particles.js config loaded');
 });
 
-
-/*==================== NAV JS ====================*/
-
-/*==================== ADD CURSOR ====================*/
-
-/* new kursor({
-    type: 4,
-    removeDefaultCursor: true,
-    color: "#8a8a8a"
-})
- */
-/*==================== REMOVE MENU ====================*/
-
-/*==================== DARK MODE BUTTON ====================*/
-
-/* const options = {
-    bottom: '32px', // default: '32px'
-    right: '32px', // default: 'unset'
-    time: '0.5s', // default: '0.3s'
-    mixColor: '#EFF1F3', // default: '#fff'
-    backgroundColor: '#EFF1F3', // default: '#fff'
-    buttonColorDark: '#222', // default: '#100f2c'
-    buttonColorLight: '#EFF1F3', // default: '#fff'
-    saveInCookies: true, // default: true,
-    label: '🌓', // default: ''
-    autoMatchOsTheme: true // default: true
-}
-
-const darkmode = new Darkmode(options);
-darkmode.showWidget(); */
-
 /*==================== TERMINAL ====================*/
 
 
@@ -75,19 +44,40 @@ var customCommands = {
 var shell = new TermlyPrompt('#terminal', { commands: customCommands })
 shell.run('help')
 
-/*==================== ACCORDION SKILLS ====================*/
+/*==================== PARALLAX ====================*/
+
+/* var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene); */
+
+
+/*==================== PORTFOLIO FILTER ====================*/
+
+$(document).ready(function() {
+    $('.portfolio-item').isotope(function() {
+        itemSelector: '.item'
+    });
 
 
 
-/*==================== QUALIFICATION TABS ====================*/
+    $('.portfolio-menu ul li').click(function() {
+        $('.portfolio-menu ul li').removeClass('active');
+        $(this).addClass('active');
 
+
+        var selector = $(this).attr('data-filter');
+        $('.portfolio-item').isotope({
+            filter: selector
+        })
+        return false;
+    });
+});
 
 /*==================== SERVICES MODAL ====================*/
 
 
 /*==================== ABOUT US SWIPER  ====================*/
 
-var swiper = new Swiper(".mySwiper", {
+/* var swiper = new Swiper(".mySwiper", {
     slidesPerView: 'auto',
     spaceBetween: 40,
     centeredSlides: true,
@@ -103,7 +93,7 @@ var swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
-
+ */
 
 /*==================== TESTIMONIAL ====================*/
 
@@ -115,6 +105,3 @@ var swiper = new Swiper(".mySwiper", {
 
 
 /*==================== SHOW SCROLL UP ====================*/
-
-
-/*==================== DARK LIGHT THEME ====================*/
