@@ -25,7 +25,7 @@ var customCommands = {
             // Here is where the action goes, do what you want and return a value
             // (more on context and arguments below)
 
-            return `Will be available in future.`
+            return `https://docdro.id/nCLN3mI`
         },
     },
     joke: { // keep it equal to name till I change it
@@ -43,12 +43,6 @@ var customCommands = {
 }
 var shell = new TermlyPrompt('#terminal', { commands: customCommands })
 shell.run('help')
-
-/*==================== PARALLAX ====================*/
-
-/* var scene = document.getElementById('scene');
-var parallaxInstance = new Parallax(scene); */
-
 
 /*==================== PORTFOLIO FILTER ====================*/
 
@@ -71,37 +65,3 @@ $(document).ready(function() {
         return false;
     });
 });
-
-/*==================== SERVICES MODAL ====================*/
-
-
-/*==================== ABOUT US SWIPER  ====================*/
-
-/* var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 'auto',
-    spaceBetween: 40,
-    centeredSlides: true,
-    grabCursor: true,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
- */
-
-/*==================== TESTIMONIAL ====================*/
-
-
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-
-
-/*==================== CHANGE BACKGROUND HEADER ====================*/
-
-
-/*==================== SHOW SCROLL UP ====================*/
